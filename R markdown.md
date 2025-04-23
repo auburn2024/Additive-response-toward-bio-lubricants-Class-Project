@@ -7,7 +7,6 @@ output:
        variant: gfm
      html_document:
        toc: true
-       toc_float: true
 ---
 
 
