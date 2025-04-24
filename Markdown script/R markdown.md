@@ -10,6 +10,47 @@ output:
        toc_float: true
 ---
 
+-[Rmd_files](Rmd_files/figure-gfm)
+
+\-[Markdown_script](Markdown_script/R%20markdown.md)
+
+``` r
+fs::dir_tree()
+```
+
+
+```
+    ## .
+    ## ├── Additive-response-toward-bio-lubricants-Class-Project.Rproj
+    ## ├── BioLubricant_Additive_PairedData.xlsx
+    ## ├── html.html
+    ## ├── html.Rmd
+    ## ├── Markdown_script
+    ## │   └── R markdown.md
+    ## ├── R markdown.md
+    ## ├── Rmd.html
+    ## ├── Rmd.md
+    ## ├── Rmd.Rmd
+    ## └── Rmd_files
+    ##     └── figure-gfm
+    ##         ├── unnamed-chunk-11-1.png
+    ##         ├── unnamed-chunk-12-1.png
+    ##         ├── unnamed-chunk-16-1.png
+    ##         ├── unnamed-chunk-22-1.png
+    ##         ├── unnamed-chunk-25-1.png
+    ##         ├── unnamed-chunk-25-2.png
+    ##         ├── unnamed-chunk-25-3.png
+    ##         ├── unnamed-chunk-25-4.png
+    ##         ├── unnamed-chunk-32-1.png
+    ##         ├── unnamed-chunk-35-1.png
+    ##         ├── unnamed-chunk-36-1.png
+    ##         ├── unnamed-chunk-37-1.png
+    ##         ├── unnamed-chunk-38-1.png
+    ##         ├── unnamed-chunk-40-1.png
+    ##         ├── unnamed-chunk-42-1.png
+    ##         └── unnamed-chunk-9-1.png
+```
+
 
 ```{r}
 library(readxl)
@@ -17,8 +58,6 @@ BioLubricant_Additive_PairedData <- read_excel("C:/Users/noork/Desktop/PLPA cour
 View(BioLubricant_Additive_PairedData)
 
 ```
-
-
 
 🔗 [View GitHub Repository](https://github.com/auburn2024/Additive-response-toward-bio-lubricants-Class-Project.git)
 
@@ -328,8 +367,6 @@ df_no_additive <- BioLubricant_Additive_PairedData %>%
 
 
 
-
-
 ```{r}
 # Filter rows where Additive is "No"
 oxidative_without_additive <- BioLubricant_Additive_PairedData %>%
@@ -340,11 +377,8 @@ summary(oxidative_without_additive$Oxidation_Stability_hr)
 ```
 
 
-
 ```{r}
-# Load necessary library
 library(ggplot2)
-
 # boxplot comparing oxidative stability with and without additive
 ggplot(BioLubricant_Additive_PairedData, aes(x = Additive, y = Oxidation_Stability_hr, fill = Additive)) +
   geom_boxplot() +
@@ -403,10 +437,6 @@ print(oxidation_summary)
 ```
 
 
-
-
-
-
 ```{r}
 ggplot(BioLubricant_Additive_PairedData, aes(
   x = Additive,
@@ -424,7 +454,6 @@ ggplot(BioLubricant_Additive_PairedData, aes(
   ) +
   theme_minimal()
 ```
-
 
 
 ```{r}
@@ -453,9 +482,6 @@ ggplot(BioLubricant_Additive_PairedData, aes(
   ) +
   theme_classic()
 ```
-
-
-
 
 
 
