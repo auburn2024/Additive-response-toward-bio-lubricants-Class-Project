@@ -345,6 +345,9 @@ library(readxl)
 library(dplyr)
 library(tidyr)
 
+Biolubricant_Additive_PairedData <- read_excel("C:/Users/noork/Desktop/PLPA course/Project design/Additive-response-toward-bio-lubricants-Class-Project/BioLubricant_Additive_PairedData.xlsx")
+View(Biolubricant_Additive_PairedData)
+
 ox_stability_wide <- df %>%
   dplyr::select(Sample_ID, Additive, Oxidation_Stability_hr) %>%
   pivot_wider(names_from = Additive, values_from = Oxidation_Stability_hr) %>%
