@@ -12,7 +12,7 @@ output:
 
 -[Rmd_files](Rmd_files/figure-gfm)
 
-\-[Markdown_script](Markdown_script/R%20markdown.md)
+-[Markdown_script](Markdown_script/R%20markdown.md)
 
 ``` r
 fs::dir_tree()
@@ -20,36 +20,46 @@ fs::dir_tree()
 
 
 ```
-    ## .
-    ## ├── Additive-response-toward-bio-lubricants-Class-Project.Rproj
-    ## ├── BioLubricant_Additive_PairedData.xlsx
-    ## ├── html.html
-    ## ├── html.Rmd
-    ## ├── Markdown_script
-    ## │   └── R markdown.md
-    ## ├── R markdown.md
-    ## ├── Rmd.html
-    ## ├── Rmd.md
-    ## ├── Rmd.Rmd
-    ## └── Rmd_files
-    ##     └── figure-gfm
-    ##         ├── unnamed-chunk-11-1.png
-    ##         ├── unnamed-chunk-12-1.png
-    ##         ├── unnamed-chunk-16-1.png
-    ##         ├── unnamed-chunk-22-1.png
-    ##         ├── unnamed-chunk-25-1.png
-    ##         ├── unnamed-chunk-25-2.png
-    ##         ├── unnamed-chunk-25-3.png
-    ##         ├── unnamed-chunk-25-4.png
-    ##         ├── unnamed-chunk-32-1.png
-    ##         ├── unnamed-chunk-35-1.png
-    ##         ├── unnamed-chunk-36-1.png
-    ##         ├── unnamed-chunk-37-1.png
-    ##         ├── unnamed-chunk-38-1.png
-    ##         ├── unnamed-chunk-40-1.png
-    ##         ├── unnamed-chunk-42-1.png
-    ##         └── unnamed-chunk-9-1.png
+   ├── Additive-response-toward-bio-lubricants-Class-Project.Rproj
+├── BioLubricant_Additive_PairedData.xlsx
+├── html.html
+├── html.Rmd
+├── Markdown_script
+│   └── R markdown.md
+├── R markdown.md
+├── Rmd.html
+├── Rmd.md
+├── Rmd.Rmd
+└── Rmd_files
+    └── figure-gfm
+        ├── unnamed-chunk-10-1.png
+        ├── unnamed-chunk-11-1.png
+        ├── unnamed-chunk-12-1.png
+        ├── unnamed-chunk-13-1.png
+        ├── unnamed-chunk-16-1.png
+        ├── unnamed-chunk-17-1.png
+        ├── unnamed-chunk-22-1.png
+        ├── unnamed-chunk-23-1.png
+        ├── unnamed-chunk-25-1.png
+        ├── unnamed-chunk-25-2.png
+        ├── unnamed-chunk-25-3.png
+        ├── unnamed-chunk-25-4.png
+        ├── unnamed-chunk-26-1.png
+        ├── unnamed-chunk-26-2.png
+        ├── unnamed-chunk-26-3.png
+        ├── unnamed-chunk-26-4.png
+        ├── unnamed-chunk-32-1.png
+        ├── unnamed-chunk-33-1.png
+        ├── unnamed-chunk-35-1.png
+        ├── unnamed-chunk-36-1.png
+        ├── unnamed-chunk-37-1.png
+        ├── unnamed-chunk-38-1.png
+        ├── unnamed-chunk-39-1.png
+        ├── unnamed-chunk-40-1.png
+        ├── unnamed-chunk-41-1.png
+        └── unnamed-chunk-42-1.png
 ```
+
 
 
 ```{r}
