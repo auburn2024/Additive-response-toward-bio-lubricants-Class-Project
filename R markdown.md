@@ -357,11 +357,13 @@ ox_stability_wide <- df %>%
 ```
 
 ```{r}
-df_yes <- df[df$Additive == "Yes", ]
+df_yes <- Biolubricant_Additive_PairedData %>%
+  filter(Additive == "Yes")
 ```
 
 ```{r}
-df_subset <- df[df$Additive == "Yes" & df$Oxidation_Stability_hr > 75, ]
+df_subset <- Biolubricant_Additive_PairedData %>%
+  filter(Additive == "Yes", Oxidation_Stability_hr > 75)
 ```
 
 
