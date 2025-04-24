@@ -496,3 +496,62 @@ ggplot(BioLubricant_Additive_PairedData, aes(x = Viscosity_cSt, y = Oxidation_St
 ```
 
 
+```{r}
+# Calculate mean and SD for each group
+ox_summary <- BioLubricant_Additive_PairedData %>%
+  group_by(Additive) %>%
+  summarise(
+    mean_OS = mean(Oxidation_Stability_hr, na.rm = TRUE),
+    sd_OS = sd(Oxidation_Stability_hr, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+
+```{r}
+ggplot(ox_summary, aes(x = Additive, y = mean_OS, fill = Additive)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(aes(ymin = mean_OS - sd_OS, ymax = mean_OS + sd_OS), 
+                width = 0.2, linewidth = 1) +
+  ylab("Mean Oxidation Stability (hr)") +
+  xlab("Additive Status") +
+  theme_minimal()
+```
+
+```{r}
+t.test(Oxidation_Stability_hr ~ Additive, data = BioLubricant_Additive_PairedData)
+```
+
+
+
+```{r}
+ggplot(ox_summary, aes(x = Additive, y = mean_OS, fill = Additive)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(aes(ymin = mean_OS - sd_OS, ymax = mean_OS + sd_OS), width = 0.2) +
+  geom_text(
+    aes(
+      y = mean_OS + sd_OS + 1,
+      label = paste("Mean =", round(mean_OS, 1), "SD =", round(sd_OS, 1))
+    ),
+    size = 3
+  ) +
+  theme_minimal() +
+  labs(
+    y = "Oxidation Stability (hr)",
+    x = "Additive"
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
