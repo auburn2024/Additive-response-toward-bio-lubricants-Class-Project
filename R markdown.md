@@ -17,10 +17,48 @@ View(BioLubricant_Additive_PairedData)
 
 ```
 
-
-
 🔗 [View GitHub Repository](https://github.com/auburn2024/Additive-response-toward-bio-lubricants-Class-Project.git)
 
+
+-[Rmd_files](Rmd_files/figure-gfm)
+
+-[Markdown_script](Markdown_script/R%20markdown.md)
+
+``` r
+fs::dir_tree()
+```
+```
+    ## .
+    ## ├── Additive-response-toward-bio-lubricants-Class-Project.Rproj
+    ## ├── BioLubricant_Additive_PairedData.xlsx
+    ## ├── html.html
+    ## ├── html.Rmd
+    ## ├── Markdown_script
+    ## │   └── R markdown.md
+    ## ├── R markdown.md
+    ## ├── Rmd.html
+    ## ├── Rmd.md
+    ## ├── Rmd.Rmd
+    ## └── Rmd_files
+    ##     └── figure-gfm
+    ##         ├── unnamed-chunk-11-1.png
+    ##         ├── unnamed-chunk-12-1.png
+    ##         ├── unnamed-chunk-16-1.png
+    ##         ├── unnamed-chunk-22-1.png
+    ##         ├── unnamed-chunk-25-1.png
+    ##         ├── unnamed-chunk-25-2.png
+    ##         ├── unnamed-chunk-25-3.png
+    ##         ├── unnamed-chunk-25-4.png
+    ##         ├── unnamed-chunk-32-1.png
+    ##         ├── unnamed-chunk-35-1.png
+    ##         ├── unnamed-chunk-36-1.png
+    ##         ├── unnamed-chunk-37-1.png
+    ##         ├── unnamed-chunk-38-1.png
+    ##         ├── unnamed-chunk-40-1.png
+    ##         ├── unnamed-chunk-42-1.png
+    ##         └── unnamed-chunk-9-1.png
+
+```
 
 
 ```{r}
@@ -506,6 +544,44 @@ ox_summary <- BioLubricant_Additive_PairedData %>%
     .groups = "drop"
   )
 ```
+
+
+```{r}
+ggplot(ox_summary, aes(x = Additive, y = mean_OS, fill = Additive)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(aes(ymin = mean_OS - sd_OS, ymax = mean_OS + sd_OS), 
+                width = 0.2, linewidth = 1) +
+  ylab("Mean Oxidation Stability (hr)") +
+  xlab("Additive Status") +
+  theme_minimal()
+```
+
+```{r}
+t.test(Oxidation_Stability_hr ~ Additive, data = BioLubricant_Additive_PairedData)
+```
+
+```{r}
+ggplot(ox_summary, aes(x = Additive, y = mean_OS, fill = Additive)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(aes(ymin = mean_OS - sd_OS, ymax = mean_OS + sd_OS), width = 0.2) +
+  geom_text(
+    aes(
+      y = mean_OS + sd_OS + 1,
+      label = paste("Mean =", round(mean_OS, 1), "SD =", round(sd_OS, 1))
+    ),
+    size = 3
+  ) +
+  theme_minimal() +
+  labs(
+    y = "Oxidation Stability (hr)",
+    x = "Additive"
+  )
+```
+
+
+
+
+
 
 
 
